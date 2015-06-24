@@ -9,38 +9,54 @@
   <title>CouldHll's Home</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- inject:vendor:css -->
   <link rel="stylesheet" href="bower_components/html5-boilerplate/css/normalize.css">
   <link rel="stylesheet" href="bower_components/html5-boilerplate/css/main.css">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <!-- endinject -->
+
+  <!-- inject:app:css -->
   <link rel="stylesheet" href="app.css">
-  <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
+  <!-- endinject -->
+
 </head>
 <body>
-  <ul class="menu">
-    <li><a href="#/particle">particle</a></li>
-    <li><a href="#/threejs">threejs</a></li>
-  </ul>
-
+  <nav class="navbar navbar-default navbar-inverse" role="navigation">
+    <div class="collapse navbar-collapse">
+      <a class="navbar-brand" href="#">CouldHll</a>
+      <ul class="nav navbar-nav">
+        <li><a href="#/particle">particle</a></li>
+        <li><a href="#/threejs">threejs</a></li>
+      </ul>
+    </div>
+  </nav>
   <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
 
   <div ng-view></div>
 
-  <div>Angular seed app: v<span app-version></span></div>
+  <div>Copyright @2015:v<span app-version></span> CouldHll</div>
 
+  <!-- inject:vendor:js -->
+  <script src="bower_components/angular/angular.js"></script>
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
   -->
-  <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
-  <script src="app.js"></script>
-  <script src="particle/particle.js"></script>
-  <script src="threejs/threejs.js"></script>
+  <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+  <script src="bower_components/threejs/build/three.js"></script>
   <script src="components/version/version.js"></script>
   <script src="components/version/version-directive.js"></script>
   <script src="components/version/interpolate-filter.js"></script>
+  <!-- endinject -->
 
-  <script src="js/three.min.js"></script>
-  <script src="http://threejs.org/examples/fonts/helvetiker_regular.typeface.js"></script>
+  <!-- inject:app:js -->
+  <script src="app.js"></script>
+  <script src="particle/particle.js"></script>
+  <script src="threejs/threejs.js"></script>
+  <!-- endinject -->
+
 </body>
 </html>
