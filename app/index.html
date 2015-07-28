@@ -4,6 +4,7 @@
 <!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
 <head>
+
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>CouldHll's Home</title>
@@ -22,22 +23,23 @@
 
 </head>
 <body>
+
   <nav class="navbar navbar-default navbar-inverse" role="navigation">
-    <div class="collapse navbar-collapse">
-      <a class="navbar-brand" href="#">CouldHll</a>
+      <a class="navbar-brand" href="#/home">CouldHll</a>
       <ul class="nav navbar-nav">
-        <li><a href="#/particle">particle</a></li>
-        <li><a href="#/threejs">threejs</a></li>
+        <li><a href="#/home">Home</a></li>
+        <li><a href="http://blog.couldhll.com">Blog</a></li>
+        <li><a href="#/about">About</a></li>
       </ul>
-    </div>
   </nav>
+
   <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
 
   <div ng-view></div>
 
-  <div>Copyright @2015:v<span app-version></span> CouldHll</div>
+  <div class="container">Copyright @2015:v<span app-version></span> CouldHll</div>
 
   <!-- inject:vendor:js -->
   <script src="bower_components/angular/angular.js"></script>
@@ -54,8 +56,9 @@
 
   <!-- inject:app:js -->
   <script src="app.js"></script>
-  <script src="particle/particle.js"></script>
-  <script src="threejs/threejs.js"></script>
+  <script src="home/home.js"></script>
+  <script src="blog/blog.js"></script>
+  <script src="about/about.js"></script>
   <!-- endinject -->
 
 </body>

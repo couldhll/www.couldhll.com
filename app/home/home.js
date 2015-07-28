@@ -1,15 +1,15 @@
 'use strict';
 
-angular.module('myApp.particle', ['ngRoute'])
+angular.module('myApp.home', ['ngRoute'])
 
     .config(['$routeProvider', function($routeProvider) {
-        $routeProvider.when('/particle', {
-            templateUrl: 'particle/particle.html',
-            controller: 'particleViewController'
+        $routeProvider.when('/home', {
+            templateUrl: 'home/home.html',
+            controller: 'homeViewController'
         });
     }])
 
-    .controller('particleViewController', [function() {
+    .controller('homeViewController', [function() {
 
         var imageScale=1;
         var particleScale=10;
@@ -72,7 +72,8 @@ angular.module('myApp.particle', ['ngRoute'])
             renderer.setPixelRatio(window.devicePixelRatio);
             renderer.setSize(window.innerWidth, window.innerHeight);
 
-            document.body.appendChild(renderer.domElement);
+            var container = document.getElementById('container');
+            container.appendChild(renderer.domElement);
 
             // start
             animate();
@@ -115,7 +116,7 @@ angular.module('myApp.particle', ['ngRoute'])
                 for (var y = 0; y < imageData.height; y ++) {
                     //var i = 4*(x * imageData.height + y);
                     var i = 4*(y * imageData.width + x);
-                    var red=imageData.data[i + 0];
+                    var red=imageData.data[i + 0]
                     var green=imageData.data[i + 1];
                     var blue=imageData.data[i + 2];
                     var alpha=imageData.data[i + 3];
@@ -134,6 +135,9 @@ angular.module('myApp.particle', ['ngRoute'])
         function animate() {
             requestAnimationFrame( animate );
             render();
+        }
+        function stopRender() {
+            cancelRequestAnimationFrame( animate );
         }
         function render() {
             camera.position.x += ( mouseX - camera.position.x ) * .05;

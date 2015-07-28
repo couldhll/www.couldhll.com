@@ -4,10 +4,11 @@
 angular.module('myApp', [
   'ngRoute',
   'ui.bootstrap',
-  'myApp.particle',
-  'myApp.threejs',
+  'myApp.home',
+  'myApp.blog',
+  'myApp.about',
   'myApp.version'
 ]).
 config(['$routeProvider', function($routeProvider) {
-  $routeProvider.otherwise({redirectTo: '/particle'});
+  $routeProvider.otherwise({redirectTo: '/home'});
 }]);
