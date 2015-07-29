@@ -103,7 +103,9 @@ gulp.task('index', function () {
         .pipe(gulp.dest(outputPaths.all))
 });
 
-gulp.task('build', ['scripts', 'styles', 'images', 'pages', 'index']);
+gulp.task('build', ['scripts', 'styles', 'images', 'pages'], function() {
+    gulp.run('index');
+});
 
 gulp.task('clean', function() {
     return gulp.src(outputPaths.all, {read: false})
