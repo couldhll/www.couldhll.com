@@ -17,6 +17,8 @@ var inputPaths = {
     appStyles: inputRootPath + '/app.css',
     vendorScripts: [inputRootPath + '/bower_components/angular/angular.js',
         inputRootPath + '/bower_components/angular-route/angular-route.js',
+        inputRootPath + '/bower_components/jquery/dist/jquery.js',
+        inputRootPath + '/bower_components/bootstrap/dist/js/bootstrap.js',
         inputRootPath + '/bower_components/angular-bootstrap/ui-bootstrap.js',
         inputRootPath + '/bower_components/threejs/build/three.js',
         inputRootPath + '/components/version/version.js',

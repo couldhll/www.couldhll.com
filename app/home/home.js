@@ -14,7 +14,7 @@ angular.module('myApp.home', ['ngRoute'])
         var imageScale=1;
         var particleScale=10;
 
-        var canvas, ctx;
+        var faceImage, container, canvas, ctx;
         var camera, scene, renderer;
 
         var windowHalfX = window.innerWidth / 2;
@@ -27,12 +27,15 @@ angular.module('myApp.home', ['ngRoute'])
 
         function init() {
             // event
-            var faceImage = document.getElementById('face');
+            faceImage = document.getElementById('face');
             faceImage.addEventListener('load', onImageLoad, false);
+
+            container = document.getElementById('container');
+            container.addEventListener('mousemove', onDocumentMouseMove, false);
+            container.addEventListener('touchstart', onDocumentTouchStart, false);
+            container.addEventListener('touchmove', onDocumentTouchMove, false);
+
             window.addEventListener('resize', onWindowResize, false);
-            document.addEventListener('mousemove', onDocumentMouseMove, false);
-            document.addEventListener('touchstart', onDocumentTouchStart, false);
-            document.addEventListener('touchmove', onDocumentTouchMove, false);
         }
 
         // image
@@ -72,7 +75,6 @@ angular.module('myApp.home', ['ngRoute'])
             renderer.setPixelRatio(window.devicePixelRatio);
             renderer.setSize(window.innerWidth, window.innerHeight);
 
-            var container = document.getElementById('container');
             container.appendChild(renderer.domElement);
 
             // start

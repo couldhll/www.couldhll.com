@@ -24,14 +24,28 @@
 </head>
 <body>
 
-  <nav class="navbar navbar-default navbar-inverse" role="navigation">
-      <a class="navbar-brand" href="#/home">CouldHll</a>
-      <ul class="nav navbar-nav">
-        <li><a href="#/home">Home</a></li>
-        <li><a href="http://blog.couldhll.com">Blog</a></li>
-        <li><a href="#/about">About</a></li>
-      </ul>
-  </nav>
+  <header class="navbar navbar-static-top navbar-inverse" role="banner">
+    <div class="container">
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="couldhll-navbar" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#/home">CouldHll</a>
+      </div>
+      <nav id="couldhll-navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;" role="navigation">
+        <ul class="nav navbar-nav">
+          <li><a href="#/home">Home</a></li>
+          <li><a href="#/about">About</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="http://blog.couldhll.com" target="_blank">Blog</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
   <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -39,7 +53,12 @@
 
   <div ng-view></div>
 
-  <div class="container">Copyright @2015:v<span app-version></span> CouldHll</div>
+  <footer role="contentinfo">
+    <div class="container">
+      <p>Designed and built with all the love in the world by <a href="https://github.com/couldhll" target="_blank">CouldHll</a></p>
+      <p>Copyright @2015 Homepage v<span app-version></span></p>
+    </div>
+  </footer>
 
   <!-- inject:vendor:js -->
   <script src="bower_components/angular/angular.js"></script>
@@ -48,6 +67,8 @@
   -->
   <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
   <script src="bower_components/threejs/build/three.js"></script>
   <script src="components/version/version.js"></script>
   <script src="components/version/version-directive.js"></script>
